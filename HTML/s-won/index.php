@@ -11,9 +11,17 @@
 			text-align: center;
 		}
 		textarea {
-			width: 100%;
+			width: 95%;
+			margin: 0 auto;
+			border: 2px solid #666;
+			padding: 12px;
+			font-family: consolas, monospace;
+			font-size: 120%;
 			height: 80%;
-			font-size: 20px;
+			overflow: auto;
+			
+			background: #333;
+			color: #ccc;
 			line-height: 120%;
 		}
 		.button {
@@ -82,7 +90,7 @@
 ?>
 <form action="result.php" method="post">
 	userid : <input type="text" name="username" size="30" maxlength="20" value=<?php echo '"'.$userName.'"'; ?>><br>
-	<textarea name="sourcecode"><?php echo urldecode($sourceCode); ?></textarea>
+	<textarea name="sourcecode"　wrap="off"><?php echo urldecode($sourceCode); ?></textarea><br>
 	<input type="submit" value="결과보기">
 	<input type="reset" value="내용 초기화">
 </form>
